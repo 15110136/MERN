@@ -1,0 +1,227 @@
+.tabs {
+  .row {
+    margin: 0 !important;
+  }
+  &__title {
+    margin-bottom: -30px;
+    justify-content: flex-end;
+    border: none;
+    @include tablet {
+      margin-bottom: 0;
+    }
+    // margin-bottom: 20px;
+    li {
+      visibility: hidden;
+      @include tablet {
+        visibility: visible;
+      }
+      .nav-link {
+        border: none;
+        color: $color-grey;
+      }
+    }
+    .nav-link.active {
+      color: $color-black;
+      border-bottom: 2px solid red;
+    }
+    li:focus {
+      outline: none;
+    }
+    li:hover {
+      cursor: pointer;
+    }
+    h5 {
+      position: absolute;
+      left: 0;
+      padding-top: 11px;
+      padding-left: 10px;
+      font-weight: bold;
+    }
+  }
+  &__content {
+    background: $color-light-grey;
+    border-top: 1px solid burlywood;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+    .tab-pane.active {
+      animation: slide-right 2s ease-out;
+    }
+
+    @keyframes slide-right {
+      0% {
+        opacity: 0;
+        // transform: translateX(-100%);
+        // transform: translateY(-10%);
+      }
+      100% {
+        opacity: 1;
+        // transform: translateX(0);
+        // transform: translateY(0);
+      }
+    }
+  }
+  &__btn {
+    text-align: center;
+  }
+  .slick-slider {
+    .tabs__product {
+      margin: 10px auto;
+      height: 380px;
+      padding-left: 0;
+      padding-right: 0;
+      @include desktop {
+        height: 400px;
+      }
+      @include large-desktop {
+        // height: 535px;
+        height: 600px;
+      }
+      box-shadow: 5px 5px rgba(128, 128, 128, 0.2);
+      border-radius: 5px;
+      background: white;
+
+      .tabs__img-container {
+        overflow: hidden;
+        position: relative;
+        z-index: 111;
+        @include desktop {
+          height: 70%;
+        }
+        @include large-desktop {
+          height: 75%;
+        }
+        &:hover {
+          .tabs__cart {
+            display: block;
+          }
+          img {
+            transition: 1s ease-in-out;
+            transform: scale(1.3);
+          }
+        }
+      }
+
+      .tabs__img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .tabs__icon {
+        position: absolute;
+        top: 0;
+        height: 80px;
+        width: 80px;
+        opacity: 0.9;
+      }
+
+      .tabs__cart {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: $color-light-grey;
+        opacity: 0.8;
+        display: none;
+        z-index: 1111;
+        // border-radius: 5px;
+        &:hover {
+          display: block;
+        }
+        button,
+        a {
+          display: block;
+          width: 80%;
+          height: 40px;
+          border: 1px solid $color-black;
+          border-radius: 5px;
+          margin: 10px auto;
+          background: pink;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        button:first-child {
+          margin-top: 30%;
+        }
+        a {
+          padding-top: 7px;
+        }
+        p {
+          width: 100%;
+          height: 90%;
+        }
+      }
+
+      img {
+        // position: relative;
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+        // &:hover {
+        //   transform: scale(1.2);
+        // }
+      }
+      p {
+        padding: 0 10px;
+        margin-top: 10px;
+        margin-bottom: 0;
+        overflow: scroll;
+        text-align: justify;
+        .tabs__starContainer {
+          margin: 0;
+        }
+      }
+      div {
+        justify-content: space-between;
+        padding: 0;
+      }
+      a {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      .tabs__star {
+        width: 35px;
+        padding-right: 5px;
+        padding-bottom: 5px;
+        @include tablet {
+          width: 28px;
+        }
+      }
+    }
+    .slick-dots {
+      display: none !important;
+      @include tablet {
+        display: block !important;
+      }
+    }
+  }
+
+  &__more {
+    text-align: center;
+    margin-top: 35px;
+    button {
+      margin-top: 35px;
+    }
+  }
+
+  &__btnMore {
+    width: 40%;
+    height: 45px;
+    background: $color-light-grey;
+    border-radius: 0;
+    color: $color-black;
+    @include tablet {
+      width: 25%;
+    }
+    @include desktop {
+      width: 15%;
+    }
+  }
+  &__addtocart {
+    display: block;
+    margin: 0 auto;
+    height: 35px;
+  }
+}

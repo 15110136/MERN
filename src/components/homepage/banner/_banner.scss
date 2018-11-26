@@ -1,0 +1,26 @@
+.banner {
+  img {
+    height: 200px;
+    @include large-mobile {
+      height: 210px;
+    }
+    @include tablet {
+        height: 300px;
+    }
+    @include desktop {
+        height: 350px;
+    }
+    @include large-desktop {
+        height: 400px;
+    }
+    width: 100%;
+  }
+  .slick-slider {
+    .slick-dots {
+      bottom: 5%;
+      li button:before {
+        color: $color-white;
+      }
+    }
+  }
+}

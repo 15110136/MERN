@@ -1,0 +1,28 @@
+.pagination {
+  justify-content: center;
+  li {
+    margin: 0 10px;
+  }
+  a {
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  &__previous,
+  &__next {
+    img {
+      width: 15px;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  &__active {
+    a {
+      color: red;
+    }
+  }
+}

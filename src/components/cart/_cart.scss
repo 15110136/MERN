@@ -1,0 +1,102 @@
+.cart {
+  ol {
+    background: white;
+    margin-bottom: 0;
+  }
+  h2 {
+    text-align: center;
+    // @include desktop {
+    //   font-size: 2rem;
+    // }
+  }
+  &__headline {
+    margin: 15px auto 5px;
+    width: 50%;
+    border-top: 1px solid $color-black;
+  }
+  &__title {
+    margin: 0 auto;
+    margin-top: 70px;
+    // margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $color-grey;
+    max-width: 95%;
+    .col {
+      padding: 0;
+      font-size: 13px;
+      text-align: center;
+      @include tablet {
+        text-align: start;
+      }
+    }
+  }
+  &__product {
+    height: 500px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding-top: 25px;
+    overflow: auto;
+    border-bottom: 1px solid $color-grey;
+    margin-bottom: 15px;
+    @include tablet {
+      margin-bottom: 35px;
+    }
+  }
+  &__tempFee,
+  &__shipFee,
+  &__totalFee {
+    @include tablet {
+      margin-left: 55%;
+    }
+    @include large-desktop {
+      margin-left: 65%;
+    }
+    padding: 0;
+    .col {
+      padding: 0;
+    }
+  }
+  &__shipFee {
+    border-bottom: 1px solid $color-gainsboro;
+  }
+  &__titleBill {
+    padding: 0;
+  }
+  &__valueBill {
+    padding: 0;
+    text-align: end;
+  }
+  &__checkout {
+    color: $color-white;
+    &:hover {
+      color: $color-white;
+      text-decoration: none;
+    }
+  }
+  &__btn {
+    height: 50px;
+    width: 280px;
+    background: black;
+    text-align: center;
+    padding-top: 12px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    @include tablet {
+      margin-bottom: 55px;
+    }
+  }
+  &__text-continue {
+    display: block;
+    margin-bottom: 10px;
+    width: 170px;
+    img {
+      width: 25px;
+      padding-bottom: 5px;
+      margin-right: 5px;
+    }
+    span {
+      color: $color-black;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Xukashop",
+  "short_name": "Xukashop",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "fullscreen",
+  "icons": [
+    
+  ]
+}

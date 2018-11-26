@@ -1,0 +1,132 @@
+.checkout {
+    ol {
+        background: white;
+        margin-bottom: 0;
+    }
+    h2 {
+        text-align: center;
+        @include desktop {
+            font-size: 2rem;
+        }
+    }
+    &__headline {
+        margin: 15px auto 5px;
+        width: 50%;
+        border-top: 1px solid black;
+    }
+    &__title {
+        margin-bottom: 20px;
+        background: black;
+        height: 50px;
+        h6 {
+            color: white;
+            font-weight: bold;
+            padding-top: 15px;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    & &__content {
+        margin-top: 38px;
+    }
+    &__items {
+        margin: 10px 0;
+        label {
+            padding-top: 7px;
+        }
+        div {
+            padding: 0;
+        }
+        .form-control {
+            &:focus {
+                border-color: #ced4da;
+                box-shadow: none;
+            }
+        }
+        span {
+            display: block;
+            margin-top: 5px;
+            color: red;
+            font-style: italic;
+        }
+    }
+    &__checkbox-order {
+        padding: 0;
+		padding-left: 35px;
+		padding-bottom: 5px;
+    }
+    &__textarea {
+        div {
+            padding: 0;
+        }
+    }
+
+    &__productBill {
+        background: $color-black;
+        height: 50px;
+        color: $color-white;
+        text-align: center;
+        font-weight: bold;
+        padding-top: 15px;
+    }
+    &__bill {
+        min-height: 500px;
+        max-height: 765px;
+    }
+    &__billItem {
+        padding: 0;
+        border: 1px solid $color-black;
+        min-height: 85%;
+        max-height: 100%;
+    }
+    &__info {
+        padding: 0;
+    }
+    &__billTitle {
+        padding: 0;
+        padding-top: 5px;
+        border-bottom: 1px solid $color-black;
+    }
+    &__btn {
+        padding: 0;
+        padding-top: 5px;
+        button {
+            width: 100%;
+            height: 60px;
+            font-size: 20px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            background: #17a2b8;
+            color: $color-white;
+            margin-bottom: 5px;
+            &:hover {
+                cursor: pointer;
+                background: #1d83b5;
+                color: $color-white;
+            }
+            @include tablet {
+                height: 85px;
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__itemOrder {
+        height: 500px;
+        overflow: auto;
+        margin: 2px 0px;
+        img {
+            width: 100%;
+            height: 75px;
+        }
+        span {
+            display: block;
+        }
+    }
+    &__total {
+        padding: 0;
+        padding-top: 5px;
+        border-top: 1px solid black;
+    }
+}

@@ -1,0 +1,48 @@
+@import 'normalize';
+@import 'breakpoint';
+@import 'variable';
+@import 'common';
+@import '../components/header/header';
+@import '../components/footer/footer';
+@import '../containers/homepage/homepage';
+@import '../components/login/login';
+@import '../components/cart/cart';
+@import '../components/checkout/checkout';
+@import '../components/common/loading';
+@import '../components/product/product';
+@import '../components/review/review';
+@import '../components/recommendation/recommendation';
+@import '../containers/product/pagination';
+@import '../containers/detailProduct/detailProduct';
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.row {
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', 'Open Sans', 'Source Sans Pro', 'Lato', sans-serif;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Roboto', 'Open Sans', 'Source Sans Pro', 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: $color-black;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    @include desktop {
+      font-size: 30px;
+    }
+  }
+}

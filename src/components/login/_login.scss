@@ -1,0 +1,64 @@
+.login {
+  ol {
+    background: white;
+    margin-bottom: 0;
+  }
+  h2 {
+    text-align: center;
+    @include desktop {
+      // font-size: 2rem;
+    }
+  }
+  &--center {
+    text-align: center;
+    button {
+      margin: 0 auto;
+    }
+    span {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  }
+  & &__btnGG {
+    background: rgb(209, 72, 54);
+    color: $color-white;
+    border: 1px solid;
+    margin-bottom: 65px;
+  }
+  button {
+    display: block;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    width: 350px;
+    height: 75px;
+    font-size: 19px;
+    // font-family: 'Source Sans Pro';
+    border-radius: 10px !important;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    i {
+      margin-left: -10px;
+      font-size: 2rem;
+    }
+    svg {
+      margin-left: -30px;
+      font-size: 1.5rem;
+      margin-top: 8px;
+    }
+    span {
+      margin-left: 7px;
+      font-size: 19px;
+      text-transform: uppercase;
+      // font-family: Source Sans Pro !important;
+    }
+  }
+  &__headline {
+    margin: 15px auto 5px;
+    width: 50%;
+    border-top: 1px solid black;
+  }
+}

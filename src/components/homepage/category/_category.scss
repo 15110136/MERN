@@ -1,0 +1,93 @@
+.category {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  @include tablet {
+    margin-top: 20px;
+  }
+  &__headline {
+    width: 80%;
+    border-top: 1.5px solid $color-black;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    @include tablet {
+      width: 80%;
+    }
+    // @include desktop {
+    //   width: 80%;
+    // }
+  }
+  h2 {
+    text-align: center;
+    // font-size: 1.4rem;
+    margin-bottom: 20px;
+    @include desktop {
+      // font-size: 2rem;
+      margin-bottom: 30px;
+    }
+  }
+  .row {
+    margin: 0px;
+  }
+
+  &__eyes,
+  &__lips,
+  &__face,
+  &__brush,
+  &__skincare,
+  &__others {
+    margin: 10px;
+    // border: 1px solid red;
+    border-radius: 5px;
+    background: $color-light-grey;
+    // display: flex;
+    // justify-content: space-around;
+    &:hover {
+      img,
+      span {
+        transform: scale(1.2);
+        transition: 1s ease-in-out;
+      }
+    }
+    img {
+      width: 50px;
+      height: 50px;
+      padding: 0 5px;
+      margin: 0;
+      @include desktop {
+        width: 80px;
+        height: 80px;
+        margin: 0px 20px;
+        padding: 0 10px;
+      }
+      @include large-desktop {
+        width: 100px;
+        height: 100px;
+        margin: 0px 20px;
+        padding: 0 10px;
+      }
+    }
+    span {
+      display: block;
+      padding-top: 15px;
+      padding-left: 3px;
+      font-size: 15px;
+      font-weight: bold;
+      @include desktop {
+        font-size: 20px;
+        padding-top: 25px;
+      }
+      @include large-desktop {
+        padding-top: 35px;
+        padding-left: 30px;
+        font-size: 25px;
+      }
+    }
+    a {
+      color: $color-black;
+      &:hover {
+        text-decoration: none;
+        color: blue;
+      }
+    }
+  }
+}

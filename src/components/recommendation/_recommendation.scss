@@ -1,0 +1,121 @@
+.recommendation {
+  background: $color-light-grey;
+  &__title {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    border-bottom: none;
+  }
+  a {
+    font-size: 20px;
+    font-weight: bold;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  h4 {
+    font-weight: bold;
+  }
+  .nav-link {
+    opacity: 0.7;
+    color: $color-black;
+    padding-bottom: 0;
+  }
+  .nav-link.active {
+    opacity: 1;
+    border-color: $color-light-grey;
+    color: $color-black;
+    background: none;
+    border-bottom: 1px solid $color-black;
+  }
+  .nav-link:hover {
+    border-color: $color-light-grey;
+    opacity: 1;
+    // text-decoration: black !important;
+  }
+  &__content {
+    background: $color-light-grey;
+    // border-top: 1px solid burlywood;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+    .tab-pane.active {
+      animation: slide-right 2s ease-out;
+    }
+
+    @keyframes slide-right {
+      0% {
+        opacity: 0;
+        // transform: translateX(-100%);
+        // transform: translateY(-10%);
+      }
+      100% {
+        opacity: 1;
+        // transform: translateX(0);
+        // transform: translateY(0);
+      }
+    }
+  }
+  &__btn {
+    text-align: center;
+  }
+  .slick-slider {
+    .recommendation__product {
+      margin: 10px auto;
+      height: 380px;
+      padding-left: 0;
+      padding-right: 0;
+      @include desktop {
+        height: 400px;
+      }
+      @include large-desktop {
+        height: 515px;
+      }
+      box-shadow: 5px 5px rgba(128, 128, 128, 0.2);
+      border-radius: 5px;
+      background: white;
+      img {
+        height: 66%;
+        width: 100%;
+        border-radius: 5px;
+        @include desktop {
+          height: 70%;
+        }
+        @include large-desktop {
+          height: 75%;
+        }
+      }
+      p {
+        padding-left: 20px;
+        text-align: start;
+        margin-top: 10px;
+        .recommendation__starContainer {
+          margin: 0;
+        }
+      }
+      div {
+        text-align: center;
+      }
+      a {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      .recommendation__star {
+        width: 35px;
+        padding-right: 5px;
+        padding-bottom: 5px;
+        @include tablet {
+          width: 28px;
+        }
+      }
+    }
+    .slick-dots {
+      display: none !important;
+      @include tablet {
+        display: block !important;
+      }
+    }
+  }
+}
