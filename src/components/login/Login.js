@@ -13,20 +13,22 @@ class Login extends Component {
     this.state = {
       email: '',
       message: '',
-      provider:''
+      provider: ''
     };
   }
 
   responseFacebook = response => {
-    console.log(response);
-    this.setState({ email: response.email,provider:'facebook' });
-    var { email,provider } = this.state;
+    // console.log(response);
+    this.setState({ email: response.email, provider: 'facebook', name: response.name, avatar: response.picture.data.url, id: response.id });
+    // console.log(this.state);
+    var { email, provider, name, avatar, id } = this.state;
     axios
-      .post('api/auth/login', { email,provider })
+      .post('api/auth/login', { email, provider, name, avatar, id })
       .then(result => {
         localStorage.setItem('jwtToken', result.data.token);
         this.setState({ message: '' });
         this.props.history.push('/');
+        // console.log('logined');
       })
       .catch(error => {
         if (error.response.status === 401) {
@@ -38,7 +40,25 @@ class Login extends Component {
   };
 
   responseGoogle = response => {
-    console.log(response);
+    // console.log(response);
+    this.setState({ email: response.profileObj.email, provider: 'google', name: response.profileObj.name, avatar: response.profileObj.imageUrl, id: response.profileObj.googleId });
+    // console.log(this.state);
+    var { email, provider, name, avatar, id } = this.state;
+    axios
+      .post('api/auth/login', { email, provider, name, avatar, id })
+      .then(result => {
+        localStorage.setItem('jwtToken', result.data.token);
+        this.setState({ message: '' });
+        this.props.history.push('/');
+        // console.log('logined');
+      })
+      .catch(error => {
+        if (error.response.status === 401) {
+          this.setState({
+            message: 'Login failed. Username or password not match',
+          });
+        }
+      });
   };
 
   render() {

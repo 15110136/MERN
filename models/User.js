@@ -4,20 +4,51 @@ var bcrypt = require('bcryptjs');
 var timestamp = require('mongoose-timestamp');
 
 var UserSchema = new Schema({
-  username: {
+  provider: {
     type: String,
-    unique: true,
     required: true
   },
-  password: {
-    type: String,
-    required: true
+  admin: {
+    username: {
+      type: String
+    },
+    password: {
+      type: String
+    }
+  },
+  facebook: {
+    email: {
+      type: String
+    },
+    id: {
+      type: String
+    },
+    name: {
+      type: String
+    },
+    avatar: {
+      type: String
+    }
+  },
+  google: {
+    email: {
+      type: String
+    },
+    id: {
+      type: String
+    },
+    name: {
+      type: String
+    },
+    avatar: {
+      type: String
+    }
   }
 });
 UserSchema.plugin(timestamp);
 
 UserSchema.methods.comparePassword = function (pass, cb) {
-  bcrypt.compare(pass, this.password, (err, isMatch) => {
+  bcrypt.compare(pass, admin.password, (err, isMatch) => {
     if (err) {
       return cb(err);
     }

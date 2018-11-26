@@ -41,10 +41,9 @@ app.use(function (err, req, res, next) {
 });
 
 mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://nhatthong:thong123@ds147073.mlab.com:47073/loginconnect', {
+mongoose.connect('mongodb://Thong:dell1800545455@xuka-shard-00-00-kltqh.mongodb.net:27017,xuka-shard-00-01-kltqh.mongodb.net:27017,xuka-shard-00-02-kltqh.mongodb.net:27017/test?ssl=true&replicaSet=Xuka-shard-0&authSource=admin&retryWrites=true', {
     promiseLibrary: require('bluebird'),
-    useNewUrlParser: true,
-    useCreateIndex: true
+    useNewUrlParser: true
   })
   .then(() => console.log('connect successful'))
   .catch((err) => console.error(err));
